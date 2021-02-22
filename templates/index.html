@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Diabetes Mellitus Prediction</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    </head>
+
+    <body>
+
+        <!-- Website Title -->
+    	<div class="container">
+           <!-- <h2 class='container-heading'><span class="heading_font">Diabetes Mellitus Predictor (Type II Diabetes)</span></h2>-->
+            <div class='description'>
+    			<p style="font-size: 20pt;">A Screening Tool for Diabetes Mellitus.</p>
+                <p style="font-size: 15pt;">(TYPE II DIABETES)</p>
+    		</div>
+    	</div>
+
+        <!-- Text Area -->
+    	<div class="ml-container">
+            {% if message %}
+            <p class="message">{{ message | safe }}</p>
+            {% endif %}
+    		<form action="/result" method="POST">
+                <input class="form-input" style="font-size: 10pt; height: 20px; width:275px;" type="text" name="age" placeholder="Age  eg. 30 Years "><br>
+                <input class="form-input" style="font-size: 10pt; height: 20px; width:275px;" type="text" name="sex" placeholder="Gender eg. Male or Female"><br>
+                <input class="form-input" style="font-size: 10pt; height: 20px; width:275px;" type="text" name="residence" placeholder="Residence e.g Town or Village"><br>
+                <input class="form-input" style="font-size: 10pt; height: 20px; width:275px;" type="text" name="sbp" placeholder="Systollic Blood Pressure e.g 120mmHg"><br>
+                <input class="form-input" style="font-size: 10pt; height: 20px; width:275px;" type="text" name="dbp" placeholder="Distollic Blood Pressure e.g 80mmHg"><br>
+                <input class="form-input" style="font-size: 10pt; height: 20px; width:275px;" type="text" name="bmi" placeholder="Body Mass Index (kg/m²) eg. 23.1"><br>
+                <input class="form-input" style="font-size: 10pt; height: 20px; width:275px;" type="text" name="hypertension" placeholder="Are You Hypertensional? eg. Yes or No"><br>
+                <input class="form-input" style="font-size: 10pt; height: 20px; width:275px;" type="text" name="fhd" placeholder="A Family Member with Diabetes eg. Yes or No"><br>
+				<input class="form-input" style="font-size: 10pt; height: 20px; width:275px;" type="text" name="alcohol" placeholder="Do You Take Alcohol eg. Yes or No"><br>
+				<input class="form-input" style="font-size: 10pt; height: 20px; width:275px;" type="text" name="smoker" placeholder="Do You Smoke eg. Yes or No"><br>
+				<input class="form-input" style="font-size: 10pt; height: 20px; width:275px;" type="text" name="obesity" placeholder="Are You Obese eg. Yes or No"><br>
+				<input class="form-input" style="font-size: 10pt; height: 20px; width:275px;" type="text" name="physically_inactive" placeholder="Are You Physically Inactive eg. Yes or No"><br>
+
+        		<input type="submit" class="prediction" value="Predict">
+        	</form>
+    	</div>
+
+        <!-- Footer -->
+       <div class='footer'>
+           <p class='footer-description'>Created with Love by Henry Semakula.</p>
+       </div>
+
+    </body>
+</html>
