@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request
 import pickle
 from flask_sqlalchemy import SQLAlchemy
+import numpy as np
 
 # Load the Random Forest CLassifier model
 filename = 'diabetes-prediction-rfc-model.pkl'
@@ -48,7 +49,7 @@ class Details(db.Model):
         self.alcohol = alcohol
         self.smoker = smoker
         self.obesity = obesity
-        self.physically_inactive = physically_inactive#
+        self.physically_inactive = physically_inactive
 
 
 @app.route('/')
@@ -59,25 +60,27 @@ def index():
 @app.route('/result', methods=['POST'])
 def result():
     if request.method == 'POST':
-        age = int(request.form['age'])
-        sex = str(request.form['sex'])
-        residence = str(request.form['residence'])
-        sbp = float(request.form['sbp'])
-        dbp = float(request.form['dbp'])
-        bmi = float(request.form['bmi'])
-        hypertension = str(request.form['hypertension'])
-        fhd = str(request.form['fhd'])
-        alcohol = str(request.form['alcohol'])
-        smoker= str(request.form['smoker'])
-        obesity = str(request.form['obesity'])
-        physically_inactive = str(request.form['physically_inactive'])
+        age = request.form['age']
+        sex = request.form['sex']
+        residence = request.form['residence']
+        sbp = request.form['sbp']
+        dbp = request.form['dbp']
+        bmi = request.form['bmi']
+        hypertension = request.form['hypertension']
+        fhd = request.form['fhd']
+        alcohol = request.form['alcohol']
+        smoker= request.form['smoker']
+        obesity = request.form['obesity']
+        physically_inactive = request.form['physically_inactive']
         if age == '' or sex =='' or residence == '' or sbp == '' or dbp == '' or bmi =='' or hypertension=='' or fhd =='' or alcohol=='' or smoker=='' or obesity =='' or physically_inactive =='':
             return render_template('index.html', message='Please All fields must be entered')
         else:
             data = Details(age,sex,residence,sbp,dbp,bmi,hypertension,fhd,alcohol,smoker,obesity,physically_inactive)
             db.session.add(data)
             db.session.commit()
-            return render_template('result.html')
+            data = np.array([[age,sex,residence,sbp,dbp,bmi,hypertension,fhd,alcohol,smoker,obesity,physically_inactive]])
+            my_prediction = classifier.predict(data)
+            return render_template('result.html', prediction=my_prediction)
 
 if __name__ =='__main__':
      app.run()

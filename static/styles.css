@@ -18,9 +18,9 @@ body{
 .container{
     padding: 30px;
 	position: relative;
-	background: linear-gradient(#388E3C, #4CAF50, #C8E6C9);
+	background: linear-gradient(45deg, #388E3C, #4CAF50, #C8E6C9);
 	background-size: 500% 500%;
-	animation: change-gradient 10s ease-in-out infinite;
+	/*animation: change-gradient 10s ease-in-out infinite;*/
 }
 @keyframes change-gradient {
 	0%{
@@ -39,14 +39,14 @@ body{
 }
 
 .heading_font{
-    color: #BDBDBD;
+    color: #ffffff;
 	font-family: 'Pacifico', cursive;
 	font-size: 35px;
 	font-weight: normal;
 }
 
 .description p{
-	color: #BDBDBD;
+	color: #ffffff;
     font-style: italic;
     font-size: 14px;
     margin: -5px 0 0;
@@ -66,7 +66,7 @@ body{
 }
 
 /* Predict Button */
-.prediction{
+.my-cta-button{
 	background: #f9f9f9;
    	border: 2px solid #000000;
     border-radius: 1000px;
@@ -79,23 +79,23 @@ body{
     text-align: center;
 }
 
-.prediction:hover{
+.my-cta-button:hover{
     color: #4d089a;
     border: 2px solid #4d089a;
 }
 
-.prediction:active{
+.my-cta-button:active{
     box-shadow: 0 0;
 }
 
 /* Contact */
 .contact-icon{
-	color: #BDBDBD;
+	color: #ffffff;
 	padding: 7px;
 }
 
 .contact-icon:hover{
-	color: #8c8c8c;
+	color: #388E3C;
 }
 
 /* Footer */
@@ -103,20 +103,20 @@ body{
 	flex-shrink: 0;
 	position: relative;
 	padding: 20px;
-	background: linear-gradient(#388E3C, #4CAF50, #C8E6C9);
+	background: linear-gradient(45deg, #388E3C, #4CAF50, #C8E6C9);
 	background-size: 500% 500%;
-	animation: change-gradient 10s ease-in-out infinite;
+	/*animation: change-gradient 10s ease-in-out infinite;*/
 }
 
 .footer-description{
-	color: #BDBDBD;
+	color: #ffffff;
 	margin: 0;
-	font-size: 12px;
+	font-size: 20px;
 }
 
 /* Result */
 .results{
-    padding: 30px 0 0;
+    padding: 40px 0 0;
 	flex: 1 0 auto;
 }
 
@@ -129,10 +129,11 @@ body{
 }
 
 .gif{
-	width: 25%;
+	width: 35%;
+	    margin: 20px 0;
 }
 
 .gif1{
 	width: 35%;
-    	margin: 10px 0;
+    	margin: 20px 0;
 }

@@ -2,33 +2,40 @@
 <!DOCTYPE html>
 
 <html lang="en" dir="ltr">
-	<head>
-		<meta charset="utf-8">
-		<title>Diabetes Mellitus Predictor</title>
-	</head>
+    <head>
+        <meta charset="utf-8">
+        <title>Diabetes Mellitus Prediction</title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='diabetes.ico') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+        <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    </head>
 
     <body>
 
         <!-- Website Title -->
 		<div class="container">
-            <h2 class='container-heading'><span class="heading_font">Diabetes Mellitus Predictor (Type II Diabetes)</span></h2>
+           <h5 class='container-heading'><span class="heading_font">Screening Tool for Diabetes Mellitus.</span></h5><br>
             <div class='description'>
-    			<p style="font-size: 20pt;">A Screening Tool for Diabetes Mellitus.</p>
+    			<p>A Machine Learning Web App, Built with Flask.</p>
     		</div>
     	</div>
 
-		<!-- Result -->
-<!--		<div class="result">-->
-<!--			{% if prediction==1 %}-->
-<!--				<h1>Prediction: <span class='danger'>Oops! You Have A Higher Risk of Having Diabetes Mellitus.</span></h1>-->
-<!--			{% elif prediction==0 %}-->
-<!--				<h1>Prediction: <span class='safe'>Great! You Are At A Low Risk of Having Diabetes Mellitus.</span></h1>-->
-<!--			{% endif %}-->
-<!--		</div>-->
+        <div class="result">
+			{% if prediction==0 %}
+				<h1>Prediction: <span class='danger'>Oops! You Have A Higher Risk of Having Diabetes Mellitus.</span></h1>
+				<img class="gif" src="{{ url_for('static', filename='high-risk.jpg') }}" alt="Diabetes Image">
+			{% elif prediction==1 %}
+				<h1>Prediction: <span class='safe'>Great! You Are At A Low Risk of Having Diabetes Mellitus.</span></h1>
+				<img class="gif1" src="{{ url_for('static', filename='low-risk.jpg') }}" alt="Not Diabetes Image">
+			{% endif %}
+		</div>
 
 		<!-- Footer -->
        <div class='footer'>
-           <p class='footer-description'>Created with Love by Henry Semakula.</p>
+            <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+            <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+            <p class='footer-description'>Created with Love by Henry Semakula.</p>
        </div>
 
 	</body>
