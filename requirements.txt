@@ -11,7 +11,7 @@ Jinja2==2.11.3
 joblib==1.0.1
 MarkupSafe==1.1.1
 numpy==1.19.5
-pandas==1.2.2
+pandas==1.1.5
 pipenv==2020.11.15
 psycopg2==2.8.6
 python-dateutil==2.8.1
