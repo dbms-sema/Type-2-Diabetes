@@ -16,7 +16,7 @@ if ENV == 'dev':
     app.config['DATABASE_URL'] = ''
 else:
     app.debug = True
-    app.config['DATABASE_URL'] = 'postgres://wmelfswyfwfynk:14fb51e0f1a8e67ec22ada0ed28024e921f8ce95ebc31a198a430aacf02fbc1e@ec2-3-209-176-42.compute-1.amazonaws.com:5432/d3v0q99e4734em'
+    app.config['DATABASE_URL'] = 'postgres://upivswguasjxrr:e78b068384dbc4b165572e5f66d80dd37953aa62844bbb87654a037b269488d3@ec2-54-87-34-201.compute-1.amazonaws.com:5432/d7cdb86lmr9p2'
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 db = SQLAlchemy(app)
