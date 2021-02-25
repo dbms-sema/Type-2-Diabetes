@@ -11,15 +11,15 @@ app = Flask(__name__)
 
 ENV = 'dev'
 
-if ENV == 'dev':
-    app.debug = True
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:1430162@localhost/diabetes'
-else:
-    app.debug = False
-    app.config['SQLALCHEMY_DATABASE_URI'] = ''
+#if ENV == 'dev':
+   # app.debug = True
+    #app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:1430162@localhost/diabetes'
+#else:
+    #app.debug = False
+   # app.config['SQLALCHEMY_DATABASE_URI'] = ''
 
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] =False
-db = SQLAlchemy(app)
+#app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] =False
+#db = SQLAlchemy(app)
 
 class Details(db.Model):
     __tablename__ = 'details'
@@ -76,8 +76,8 @@ def result():
             return render_template('index.html', message='<b>Please All Fields Must Be Filled In !!</b>')
         else:
             data = Details(age,sex,residence,sbp,dbp,bmi,hypertension,fhd,alcohol,smoker,obesity,physically_inactive)
-            db.session.add(data)
-            db.session.commit()
+            #db.session.add(data)
+            #db.session.commit()
             data = np.array([[age,sex,residence,sbp,dbp,bmi,hypertension,fhd,alcohol,smoker,obesity,physically_inactive]])
             my_prediction = classifier.predict(data)
             return render_template('result.html', prediction=my_prediction)
