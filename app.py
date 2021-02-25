@@ -19,7 +19,7 @@ else:
     app.debug = True
     app.config['DATABASE_URL'] = 'postgres://wmelfswyfwfynk:14fb51e0f1a8e67ec22ada0ed28024e921f8ce95ebc31a198a430aacf02fbc1e@ec2-3-209-176-42.compute-1.amazonaws.com:5432/d3v0q99e4734em'
 
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] =False
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] =True
 db = SQLAlchemy(app)
 
 class Details(db.Model):
