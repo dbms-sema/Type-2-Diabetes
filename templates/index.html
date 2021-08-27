@@ -26,22 +26,49 @@
             {% if message %}
             <p class="message">{{ message | safe }}</p>
             {% endif %}
-    		<form action="/result" method="POST">
-                <input class="form-input" style="font-size: 10pt; height: 20px; width:275px;" type="text" name="age" placeholder="Age  eg. 30 Years "><br>
-                <input class="form-input" style="font-size: 10pt; height: 20px; width:275px;" type="text" name="sex" placeholder="Gender eg. Male or Female"><br>
-                <input class="form-input" style="font-size: 10pt; height: 20px; width:275px;" type="text" name="residence" placeholder="Residence e.g Town or Village"><br>
-                <input class="form-input" style="font-size: 10pt; height: 20px; width:275px;" type="text" name="sbp" placeholder="Systollic Blood Pressure e.g 120mmHg"><br>
-                <input class="form-input" style="font-size: 10pt; height: 20px; width:275px;" type="text" name="dbp" placeholder="Distollic Blood Pressure e.g 80mmHg"><br>
-                <input class="form-input" style="font-size: 10pt; height: 20px; width:275px;" type="text" name="bmi" placeholder="Body Mass Index (kg/m²) eg. 23.1"><br>
-                <input class="form-input" style="font-size: 10pt; height: 20px; width:275px;" type="text" name="hypertension" placeholder="Are You Hypertensgit give? eg. Yes or No"><br>
-                <input class="form-input" style="font-size: 10pt; height: 20px; width:275px;" type="text" name="fhd" placeholder="A Family Member with Diabetes eg. Yes or No"><br>
-				<input class="form-input" style="font-size: 10pt; height: 20px; width:275px;" type="text" name="alcohol" placeholder="Do You Take Alcohol eg. Yes or No"><br>
-				<input class="form-input" style="font-size: 10pt; height: 20px; width:275px;" type="text" name="smoker" placeholder="Do You Smoke eg. Yes or No"><br>
-				<input class="form-input" style="font-size: 10pt; height: 20px; width:275px;" type="text" name="obesity" placeholder="Are You Obese eg. Yes or No"><br>
-				<input class="form-input" style="font-size: 10pt; height: 20px; width:275px;" type="text" name="physically_inactive" placeholder="Are You Physically Inactive eg. Yes or No"><br>
+			<div class="diabetes">
+			<form action="/result" method="POST">
+				<p>Select Your Gender:
+					<input type="radio"  name="sex" value="0"> Male
+					<input type="radio"  name="sex" value="1"> Female
+				</p>
+				<p>Select Your Location:
+					<input type="radio"  name="residence" value="0"> Village
+					<input type="radio"  name="residence" value="1"> Town
+				</p>
+				It's Your Age: <input class="form-input" style="font-size: 10pt; height: 20px; width:190px;" type="text" name="age" placeholder="Age  eg. 30 Years "><br>
+				<p>A Family Member with Diabetes?
+					<input type="radio"  name="fhd" value="0"> No.
+					<input type="radio"  name="fhd" value="1"> Yes.
+				</p>
 
+				<p>Do You Take Alcohol?
+					<input type="radio"  name="alcohol" value="0"> No.
+					<input type="radio"  name="alcohol" value="1"> Yes.
+				</p>
+
+				<p>Do You Smoke?
+					<input type="radio"  name="smoker" value="0"> No.
+					<input type="radio"  name="smoker" value="1"> Yes.
+				</p>
+                Pressure: <input class="form-input" style="font-size: 10pt; height: 20px; width:217px;" type="text" name="sbp" placeholder="Systollic Blood Pressure e.g 120mmHg"><br>
+                Pressure: <input class="form-input" style="font-size: 10pt; height: 20px; width:217px;" type="text" name="dbp" placeholder="Distollic Blood Pressure e.g 80mmHg"><br>
+                Enter BMI: <input class="form-input" style="font-size: 10pt; height: 20px; width:212px;" type="text" name="bmi" placeholder="Body Mass Index (kg/m²) eg. 23.1"><br>
+				 <p>Are You Hypertensive?
+					<input type="radio"  name="hypertension" value="0"> No.
+					<input type="radio"  name="hypertension" value="1"> Yes.
+				</p>
+				<p>Are You Obese?
+					<input type="radio"  name="obesity" value="0"> No.
+					<input type="radio"  name="obesity" value="1"> Yes.
+				</p>
+				<p>Are You Physically Inactive?
+					<input type="radio"  name="physically_inactive" value="0"> No.
+					<input type="radio"  name="physically_inactive" value="1"> Yes.
+				</p>
         		<input type="submit" class="prediction" value="Predict">
         	</form>
+			</div>
     	</div>
 
         <!-- Footer -->

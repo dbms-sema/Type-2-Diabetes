@@ -1,6 +1,6 @@
 html{
 	height: 100%;
-	margin: 0;
+	margin: 1;
 }
 
 body{
@@ -16,10 +16,10 @@ body{
 
 /* Website Title */
 .container{
-    padding: 30px;
+    padding: 1px;
 	position: relative;
 	background: linear-gradient(45deg, #388E3C, #4CAF50, #C8E6C9);
-	background-size: 500% 500%;
+	background-size: 200% 200%;
 	/*animation: change-gradient 10s ease-in-out infinite;*/
 }
 @keyframes change-gradient {
@@ -33,18 +33,36 @@ body{
 		background-position: 0 50%;
 	}
 }
-
 .container-heading{
     margin: 0;
 }
+.diabetes {
+  /* The image used */
+  background-image: url("transparent.jpg");
+    /* Control the height of the image */
+  min-height: 380px;
 
+  /* Center and scale the image nicely */
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
 .heading_font{
     color: #ffffff;
 	font-family: 'Pacifico', cursive;
-	font-size: 35px;
+	font-size: 20px;
 	font-weight: normal;
 }
-
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+  }
 .description p{
 	color: #ffffff;
     font-style: italic;
@@ -63,25 +81,28 @@ body{
 	width: 350px;
 	height: 25px;
 	margin-bottom: 5px;
+	border: 2px solid green;
+    border-radius: 4px;
 }
 
 /* Predict Button */
 .my-cta-button{
-	background: #f9f9f9;
-   	border: 2px solid #000000;
+	background: #00ff00;
+   	border: 8px solid #000000;
     border-radius: 1000px;
     box-shadow: 3px 3px #8c8c8c;
 	margin-top: 10px;
-    padding: 10px 36px;
+    padding: 20px 56px;
     color: #000000;
     display: inline-block;
-   	font: italic bold 20px/1 "Calibri", sans-serif;
+   	font: italic bold 20px/1 "Calibri", serif;
     text-align: center;
 }
 
 .my-cta-button:hover{
     color: #4d089a;
     border: 2px solid #4d089a;
+
 }
 
 .my-cta-button:active{
@@ -102,9 +123,9 @@ body{
 .footer{
 	flex-shrink: 0;
 	position: relative;
-	padding: 20px;
+	padding: 10px;
 	background: linear-gradient(45deg, #388E3C, #4CAF50, #C8E6C9);
-	background-size: 500% 500%;
+	background-size: 200% 200%;
 	/*animation: change-gradient 10s ease-in-out infinite;*/
 }
 
