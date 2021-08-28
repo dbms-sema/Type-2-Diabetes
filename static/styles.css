@@ -4,7 +4,7 @@ html{
 }
 
 fieldset {
-  background-color: #00000;
+  background-image: url("transparent.jpg");
 }
 
 legend {
