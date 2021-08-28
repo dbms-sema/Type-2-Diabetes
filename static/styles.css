@@ -11,6 +11,7 @@ legend {
   background-color: green;
   color: red;
   padding: 10px 10px;
+  font-style: italic;
 }
 
 
@@ -49,7 +50,7 @@ body{
 }
 .heading_font{
     	color: #ff0000;
-	font-family: 'Pacifico', cursive;
+	font-style: italic;
 	font-size: 30px;
 	font-weight: normal;
 }
