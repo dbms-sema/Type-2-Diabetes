@@ -27,9 +27,10 @@
             <p class="message">{{ message | safe }}</p>
             {% endif %}
 			
+			
+			<form action="/result" method="POST">
 			<fieldset>
 			<legend>Diabetes Mellitus Screening Form</legend>
-			<form action="/result" method="POST">
 				<p>Select Your Gender:
 					<input type="radio"  name="sex" value="0"> Male
 					<input type="radio"  name="sex" value="1"> Female
@@ -69,8 +70,9 @@
 					<input type="radio"  name="physically_inactive" value="1"> Yes.
 				</p>
         		<input type="submit" class="prediction" value="Predict">
-        	</form>
 		</fieldset>
+				
+        	</form>
 			
     	</div>
 
