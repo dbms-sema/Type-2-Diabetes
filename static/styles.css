@@ -48,18 +48,12 @@ body{
     margin: 0;
 }
 .heading_font{
-	/*
-    	color: #ffffff;
+    	color: #ff0000;
 	font-family: 'Pacifico', cursive;
 	font-size: 20px;
 	font-weight: normal;
 	/*background: linear-gradient(45deg, #388E3C, #4CAF50, #C8E6C9);*/
-	*/
-	flex-shrink: 0;
-	position: relative;
-	padding: 10px;
-	background: linear-gradient(45deg, #388E3C, #4CAF50, #C8E6C9);
-	background-size: 200% 200%;
+	
 }
 .checkmark {
 	  position: absolute;
