@@ -52,7 +52,7 @@ body{
 	font-family: 'Pacifico', cursive;
 	font-size: 20px;
 	font-weight: normal;
-	/*background: linear-gradient(45deg, #388E3C, #4CAF50, #C8E6C9);*/
+	background: linear-gradient(45deg, #388E3C, #4CAF50, #C8E6C9);
 	
 }
 .checkmark {
@@ -126,11 +126,11 @@ body{
 	padding: 10px;
 	background: linear-gradient(45deg, #388E3C, #4CAF50, #C8E6C9);
 	background-size: 200% 200%;
-	/*animation: change-gradient 10s ease-in-out infinite;*/
+	animation: change-gradient 10s ease-in-out infinite;
 }
 
 .footer-description{
-	color: #ffffff;
+	color: #ff0000;
 	margin: 0;
 	font-size: 20px;
 }
