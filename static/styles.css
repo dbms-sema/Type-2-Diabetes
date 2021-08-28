@@ -52,10 +52,9 @@ body{
   /* The image used */
   background-image: url("transparent.jpg");
     /* Control the height of the image */
-  min-height: 380px;
-
+  min-height: 25px;
   /* Center and scale the image nicely */
-  background-position: center top;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -134,7 +133,7 @@ body{
 	flex-shrink: 0;
 	position: relative;
 	padding: 10px;
-	background: linear-gradient(45deg, #388E3C, #4CAF50, #C8E6C9);
+	background: linear-gradient(25deg, #388E3C, #4CAF50, #C8E6C9);
 	background-size: 100% 100%;
 	/*animation: change-gradient 10s ease-in-out infinite;*/
 }
