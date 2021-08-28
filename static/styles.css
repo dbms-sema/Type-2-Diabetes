@@ -20,7 +20,7 @@ body{
 	position: relative;
 	background: linear-gradient(45deg, #388E3C, #4CAF50, #C8E6C9);
 	background-size: 100% 100%;
-	/*animation: change-gradient 10s ease-in-out infinite;*/
+	animation: change-gradient 10s ease-in-out infinite;
 }
 @keyframes change-gradient {
 	0%{
