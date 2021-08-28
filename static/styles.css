@@ -47,24 +47,12 @@ body{
 .container-heading{
     margin: 0;
 }
-.diabetes {
-  /* The image used */
-  background-image: url("transparent.jpg");
-    /* Control the height of the image */
-  min-height: 180px;
-
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
 .heading_font{
     	color: #ffffff;
 	font-family: 'Pacifico', cursive;
 	font-size: 20px;
 	font-weight: normal;
-	background: linear-gradient(45deg, #388E3C, #4CAF50, #C8E6C9);
+	/*background: linear-gradient(45deg, #388E3C, #4CAF50, #C8E6C9);*/
 }
 .checkmark {
 	  position: absolute;
