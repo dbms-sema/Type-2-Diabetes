@@ -3,15 +3,15 @@ html{
 	margin: 1;
 }
 fieldset{
-	margin: 2em 0;
-	padding: 1em 2em;
+	margin: 1em 0;
+	padding: 1em 1em;
 	border: solid 1px #ccc;
-	border-raduis: 6px;
+	border-raduis:1px;
 	min-width: 20px;
 }
 
 legend{
-	font-size: 1.25em;
+	font-size: 1em;
 	padding: 0.25em;
 	color: red;	
 }
