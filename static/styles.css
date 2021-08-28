@@ -53,6 +53,7 @@ body{
 	font-size: 20px;
 	font-weight: normal;
 	background: linear-gradient(45deg, #388E3C, #4CAF50, #C8E6C9);
+	animation: change-gradient 10s ease-in-out infinite;
 	
 }
 .checkmark {
