@@ -26,27 +26,27 @@ class Details(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     sex = db.Column(db.String(20))
     residence = db.Column(db.String(20))
-    age = db.Column(db.Integer)
-    fhd = db.Column(db.String(20))
     alcohol = db.Column(db.String(20))
     smoker = db.Column(db.String(20))
+    age = db.Column(db.Integer)
     sbp = db.Column(db.Float)
     dbp = db.Column(db.Float)
     bmi = db.Column(db.Float)
+    fhd = db.Column(db.String(20))
     hypertension = db.Column(db.String(20))
     obesity = db.Column(db.String(20))
     physically_inactive = db.Column(db.String(20))
 
-    def __init__(self,sex,residence,age,fhd,alcohol,smoker,sbp,dbp,bmi,hypertension,obesity,physically_inactive):
+    def __init__(self,sex,residence,alcohol,smoker,age,sbp,dbp,bmi,fhd,hypertension,obesity,physically_inactive):
         self.sex = sex
         self.residence = residence
-        self.age = age
-        self.fhd = fhd
         self.alcohol = alcohol
         self.smoker = smoker
+        self.age = age
         self.sbp = sbp
         self.dbp = dbp
         self.bmi = bmi
+        self.fhd = fhd
         self.hypertension = hypertension
         self.obesity = obesity
         self.physically_inactive = physically_inactive
@@ -62,23 +62,23 @@ def result():
     if request.method == 'POST':
         sex = request.form['sex']
         residence = request.form['residence']
-        age = request.form['age']
-        fhd = request.form['fhd']
         alcohol = request.form['alcohol']
         smoker= request.form['smoker']
+        age = request.form['age']
         sbp = request.form['sbp']
         dbp = request.form['dbp']
         bmi = request.form['bmi']
+        fhd = request.form['fhd']
         hypertension = request.form['hypertension']
         obesity = request.form['obesity']
         physically_inactive = request.form['physically_inactive']
-        if sex =='' or residence == '' or age == '' or  fhd =='' or alcohol=='' or smoker=='' or sbp == '' or dbp == '' or bmi =='' or hypertension==''  or obesity =='' or physically_inactive =='':
+        if sex =='' or residence == '' or alcohol=='' or smoker=='' or age == '' or sbp == '' or dbp == '' or bmi =='' or  fhd =='' or hypertension=='' or obesity =='' or physically_inactive =='':
             return render_template('index.html', message='<b>Please All Fields Must Be Filled In !!</b>')
         else:
-            data = Details(sex,residence,age,fhd,alcohol,smoker,sbp,dbp,bmi,hypertension,obesity,physically_inactive)
+            data = Details(sex,residence,alcohol,smoker,age,sbp,dbp,bmi,fhd,hypertension,obesity,physically_inactive)
             db.session.add(data)
             db.session.commit()
-            data = np.array([[sex,residence,age,fhd,alcohol,smoker,sbp,dbp,bmi,hypertension,obesity,physically_inactive]])
+            data = np.array([[sex,residence,alcohol,smoker,age,sbp,dbp,bmi,fhd,hypertension,obesity,physically_inactive]])
             my_prediction = classifier.predict(data)
             return render_template('result.html', prediction=my_prediction)
 
