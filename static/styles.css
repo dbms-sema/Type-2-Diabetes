@@ -126,7 +126,7 @@ body{
 }
 
 .contact-icon:hover{
-	color: #388E3C;
+	color: #8c8c8c;
 }
 
 /* Footer */
@@ -135,14 +135,14 @@ body{
 	position: relative;
 	padding: 10px;
 	background: linear-gradient(45deg, #388E3C, #4CAF50, #C8E6C9);
-	background-size: 200% 200%;
+	background-size: 100% 100%;
 	/*animation: change-gradient 10s ease-in-out infinite;*/
 }
 
 .footer-description{
 	color: #ffffff;
 	margin: 0;
-	font-size: 20px;
+	font-size: 8px;
 }
 
 /* Result */
@@ -156,7 +156,7 @@ body{
 }
 
 .safe{
-    color: green;
+    color: #0f2620;
 }
 
 .gif{
