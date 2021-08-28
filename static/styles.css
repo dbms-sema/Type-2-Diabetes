@@ -2,190 +2,138 @@ html{
 	height: 100%;
 	margin: 1;
 }
-fieldset{
-	margin: 1em 0;
-	padding: 1em 1em;
-	border: solid 1px #ccc;
-	border-raduis:1px;
-	min-width: 5px;
+
+body{
+	font-family: Arial, Helvetica,sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
 }
 
-legend{
-	font-size: 1em;
-	padding: 0.25em;
-	color: red;	
+/* Website Title */
+.container{
+    padding: 1px;
+	position: relative;
+	background: linear-gradient(45deg, #388E3C, #4CAF50, #C8E6C9);
+	background-size: 200% 200%;
+	/*animation: change-gradient 10s ease-in-out infinite;*/
 }
-        body {
-            margin: 0 auto;
-            background-color: white;
-        }
-        
-        div.formContainer {
-            margin: 4em auto 4em auto;
-            width: 80%;
-            color: #FCE205;
-            border: 1px solid #FCE205;
-            border-radius: 2px;
-        }
-        
-        div.heading {
-            margin: 0 auto 0 auto;
-            width: 100%;
-            padding: 1em 0 1em 0;
-            letter-spacing: 0.1em;
-            font-size: 1.2em;
-            font-weight: bold;
-            border-bottom: 1px solid #FCE205;
-            text-align: center;
-            background-color: #FCE205;
-            color: black;
-        }
-        
-        div.description {
-            padding: 1em 0 1em 0;
-            width: 80%;
-            margin: 0 auto 0 auto;
-            text-align: center;
-        }
-        
-        div.form {
-            margin: 0 auto 0 auto;
-            width: 100%;
-        }
-        
-        div.form form {
-            margin: 0 auto 0 auto;
-            width: 80%;
-        }
-        
-        div.form label {
-            display: block;
-            width: 80%;
-            margin: 1em auto 1em auto;
-            outline: none;
-            color: #FCE205;
-            font-weight: bolder;
-            letter-spacing: 0.1;
-        }
-        
-        div.form input {
-            display: block;
-            width: 80%;
-            margin: 1em auto 1em auto;
-            outline: none;
-            color: #FCE205;
-            padding: 1.2em 0 1em 1.2em;
-            background-color: black;
-            border: 0.5px solid #FCE205;
-        }
-        
-        div.form textarea {
-            display: block;
-            width: 80%;
-            margin: 1em auto 1em auto;
-            outline: none;
-            color: #FCE205;
-            padding: 1.2em 0 1em 1.2em;
-            background-color: black;
-            border: 0.5px solid #FCE205;
-            height: 8em;
-            resize: none;
-        }
-        
-        div.form button {
-            outline: none;
-            margin: 2em auto 2em auto;
-            padding: 2em;
-            cursor: pointer;
-            border: none;
-            display: block;
-            width: 60%;
-            text-align: center;
-            border: 1px solid #FCE205;
-        }
-        
-        div.form input:active,
-        div.form input:focus,
-        div.form select:active,
-        div.form select:focus,
-        div.form textarea:active,
-        div.form textarea:focus,
-        div.form button:active,
-        div.form button:hover {
-            box-shadow: 0 0 2px 2px white;
-        }
-        
-        div.form button {
-            background-color: black;
-            color: #FCE205;
-            font-weight: bolder;
-            transition: all 0.2s linear;
-        }
-        
-        @keyframes status {
-            from {
-                transform: scale(0);
-            }
-            to {
-                transform: scale(1);
-            }
-        }
-        
-        div.statusActive {
-            display: block;
-            width: 80%;
-            margin: 1em auto 1em auto;
-            padding: 1.2em 0 1em 1.2em;
-            background-color: #FCE205;
-            color: black;
-            text-align: center;
-            animation-name: status;
-            animation-duration: 0.3s;
-            transition: all 0.2s linear;
-        }
-        
-        div.loadingActive {
-            width: 90%;
-            margin: 4em auto 4em auto;
-            grid-template-columns: 33.3% 33.3% 33.3%;
-            display: grid;
-            transition: all linear 0.2s;
-        }
-        
-        div.loadingActive div {
-            padding: 0.5em;
-            background-color: #FCE205;
-            animation-name: rotatingDiv;
-            animation-duration: 1s;
-            animation-iteration-count: infinite;
-        }
-        
-        @keyframes rotatingDiv {
-            from {
-                transform: rotate(-180deg);
-            }
-            to {
-                transform: rotate(360deg);
-            }
-        }
-        
-        @media only screen and (min-width: 1224px) {
-            div.formContainer {
-                width: 500px;
-            }
-        }
-        
-        @media only screen and (min-width: 1824px) {
-            div.formContainer {
-                width: 500px;
-            }
-        }
-        
-        @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-            div.formContainer {
-                width: 80%;
-            }
-        }
+@keyframes change-gradient {
+	0%{
+		background-position: 0 50%;
+	}
+	50%{
+		background-position: 100% 50%;
+	}
+	100%{
+		background-position: 0 50%;
+	}
+}
+.container-heading{
+    margin: 0;
+}
+.diabetes {
+  /* The image used */
+  background-image: url("transparent.jpg");
+    /* Control the height of the image */
+  min-height: 380px;
+
+  /* Center and scale the image nicely */
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.heading_font{
+    color: #ffffff;
+	font-family: 'Pacifico', cursive;
+	font-size: 20px;
+	font-weight: normal;
+}
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+  }
+.description p{
+	color: #ffffff;
+    font-style: italic;
+    font-size: 14px;
+    margin: -5px 0 0;
+}
+
+/* Text Area */
+.ml-container{
+    margin: 30px 0;
+	flex: 1 0 auto;
+}
+
+.form-input {
+	text-align: center;
+	width: 350px;
+	height: 25px;
+	margin-bottom: 5px;
+	border: 2px solid green;
+    border-radius: 4px;
+}
+
+/* Predict Button */
+.my-cta-button{
+	background: #00ff00;
+   	border: 8px solid #000000;
+    border-radius: 1000px;
+    box-shadow: 3px 3px #8c8c8c;
+	margin-top: 10px;
+    padding: 20px 56px;
+    color: #000000;
+    display: inline-block;
+   	font: italic bold 20px/1 "Calibri", serif;
+    text-align: center;
+}
+
+.my-cta-button:hover{
+    color: #4d089a;
+    border: 2px solid #4d089a;
+
+}
+
+.my-cta-button:active{
+    box-shadow: 0 0;
+}
+
+/* Contact */
+.contact-icon{
+	color: #ffffff;
+	padding: 7px;
+}
+
+.contact-icon:hover{
+	color: #388E3C;
+}
+
+/* Footer */
+.footer{
+	flex-shrink: 0;
+	position: relative;
+	padding: 10px;
+	background: linear-gradient(45deg, #388E3C, #4CAF50, #C8E6C9);
+	background-size: 200% 200%;
+	/*animation: change-gradient 10s ease-in-out infinite;*/
+}
+
+.footer-description{
+	color: #ffffff;
+	margin: 0;
+	font-size: 20px;
+}
 
 /* Result */
 .results{
@@ -198,7 +146,7 @@ legend{
 }
 
 .safe{
-    color: #0f2620;
+    color: green;
 }
 
 .gif{
