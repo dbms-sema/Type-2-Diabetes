@@ -3,18 +3,6 @@ html{
 	margin: 1;
 }
 
-fieldset {
-	background-color: #fffff;
-}
-  
-legend {
-  background-color: green;
-  color: red;
-  padding: 10px 10px;
-  font-style: italic;
-}
-
-
 body{
     font-family: Arial, Helvetica,sans-serif;
     text-align: center;
