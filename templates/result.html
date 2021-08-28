@@ -23,7 +23,10 @@
 
         <div class="result">
 			{% if prediction==0 %}
-				<h1>Prediction: <span class='danger'>Oops! You Have A Higher Risk of Having Diabetes Mellitus.<p> You Need to Visit a Hospital for Diabetes Testing Please!!!</p></span></h1>
+				<h1>Prediction: <span class='danger'>Oops! You Have A Higher Risk of Having Diabetes Mellitus.<br>
+					<p> You Need to Visit a Hospital for Diabetes Testing Please!!!</p>
+					</span>			
+				</h1>
 				<img class="gif" src="{{ url_for('static', filename='high-risk.jpg') }}" alt="Diabetes Image">
 			{% elif prediction==1 %}
 				<h1>Prediction: <span class='safe'>Great! You Are At A Low Risk of Having Diabetes Mellitus.</span></h1>
