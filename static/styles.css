@@ -7,7 +7,7 @@ fieldset{
 	padding: 1em 2em;
 	border: solid 1px #ccc;
 	border-raduis: 6px;
-	min-width: 200px;
+	min-width: 20px;
 }
 
 legend{
