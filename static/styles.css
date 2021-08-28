@@ -2,9 +2,21 @@ html{
 	height: 100%;
 	margin: 1;
 }
+fieldset{
+	margin: 2em 0;
+	padding: 1em 2em;
+	border: solid 1px #ccc;
+	border-raduis: 6px;
+	min-width: 200px;
+}
 
+legend{
+	font-size: 1.25em;
+	padding: 0.25em;
+	color:#999;	
+}
 body{
-	font-family: Arial, Helvetica,sans-serif;
+    font-family: Arial, Helvetica,sans-serif;
     text-align: center;
     margin: 0;
     padding: 0;
