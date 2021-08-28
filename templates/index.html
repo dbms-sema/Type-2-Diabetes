@@ -31,14 +31,16 @@
 			<form action="/result" method="POST">
 			
 			
-				<p>Select Your Gender:
-					<input type="radio"  name="sex" value="0"> Male
-					<input type="radio"  name="sex" value="1"> Female
-				</p>
-				<p>Select Your Location:
-					<input type="radio"  name="residence" value="0"> Village
-					<input type="radio"  name="residence" value="1"> Town
-				</p>
+				<p>Select Your Gender:</p>
+					<input type="radio"  name="sex" value="0" id="0">
+					<label for="0">Male</label><br>				
+					<input type="radio"  name="sex" value="1" id="1">
+					<label for="1">Female</label><br>
+				<p>Select Your Location:</p>
+					<input type="radio"  name="residence" value="1" id="1">
+					<label for="1">Town</label><br>				
+					<input type="radio"  name="residence" value="0" id="0">
+					<label for="0">Village</label><br>
 				It's Your Age: <input class="form-input" style="font-size: 10pt; height: 20px; width:190px;" type="text" name="age" placeholder="Age  eg. 30 Years "><br>
 				<p>A Family Member with Diabetes?
 					<input type="radio"  name="fhd" value="0"> No.
