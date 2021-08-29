@@ -115,7 +115,8 @@ tr{
 	flex-shrink: 0;
 	position: relative;
 	padding: 10px;
-	background: linear-gradient(45deg, #388E3C, #4CAF50, #C8E6C9);
+	background-color:#006400;
+	/*background: linear-gradient(45deg, #388E3C, #4CAF50, #C8E6C9);*/
 	background-size: 200% 200%;
 	/*animation: change-gradient 10s ease-in-out infinite;*/
 }
