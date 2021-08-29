@@ -31,7 +31,10 @@
 			
 			
 	<table cellspacing="15" cellpadding="15">
-			<tr>
+			<tr>	
+				<td>
+					Please Enter Your Age:<input class="form-input" inputmode ="numeric" style="font-size: 10pt; height: 20px; width:150px;" type="text" name="age" placeholder="Enter Your Age:"/><br>
+				</td>
 				<td>
 					<p>Select Your Gender:</p>
 					<input type="radio"  name="sex" value="0" id="0">
@@ -46,7 +49,12 @@
 					<input type="radio"  name="residence" value="0" id="0">
 					<label for="0">Village</label>
 				</td>
-					<td>
+			 </tr>
+			 <tr>
+				 <td>
+					Body mass Index:<input class="form-input" inputmode ="decimal" style="font-size: 10pt; height: 20px; width:150px;" type="text" name="bmi" placeholder="Body Mass Index (kg/m²)"/>
+				</td>
+				 <td>
 					<p>Do You Drink Alcohol?</p>
 					<input type="radio"  name="alcohol" value="1" id="1">
 					<label for="1">Yes.</label>				
@@ -61,23 +69,12 @@
 					<label for="0">No.</label>
 
 				 </td>
-
+				
 			 </tr>
-			 <tr>
-				<td>
-					Please Enter Your Age:<input class="form-input" inputmode ="numeric" style="font-size: 10pt; height: 20px; width:150px;" type="text" name="age" placeholder="Enter Your Age:"/><br>
-				</td>
+			<tr>
 				<td> 
 					Enter Your Pressure:<input class="form-input" inputmode ="decimal" style="font-size: 10pt; height: 20px; width:150px;" type="text" name="sbp" placeholder="Systollic Blood Pressure"/>
 				</td>
-				<td>
-					Enter Your Pressure:<input class="form-input" inputmode ="decimal" style="font-size: 10pt; height: 20px; width:150px;" type="text" name="dbp" placeholder="Distollic Blood Pressure"/>
-				</td>
-				<td>
-					Body mass Index:<input class="form-input" inputmode ="decimal" style="font-size: 10pt; height: 20px; width:150px;" type="text" name="bmi" placeholder="Body Mass Index (kg/m²)"/>
-				</td>
-			 </tr>
-			<tr>
 				<td>
 					<p>Have a Family Member with Diabetes?</p>
 					<input type="radio"  name="fhd" value="1" id="1">
@@ -91,6 +88,11 @@
 					<label for="1">Yes.</label>				
 					<input type="radio"  name="hypertension" value="0" id="0">
 					<label for="0">No.</label>
+				</td>
+			</tr>
+		        <tr>
+				<td>
+					Enter Your Pressure:<input class="form-input" inputmode ="decimal" style="font-size: 10pt; height: 20px; width:150px;" type="text" name="dbp" placeholder="Distollic Blood Pressure"/>
 				</td>
 				<td>
 					<p>Are You Obese?</p>
