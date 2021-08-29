@@ -22,7 +22,8 @@ tr{
 .container{
     padding: 1px;
 	position: relative;
-	background: linear-gradient(45deg, #388E3C, #4CAF50, #C8E6C9);
+	/*background: linear-gradient(45deg, #388E3C, #4CAF50, #C8E6C9);*/
+	background-color:#006400;
 	background-size: 100% 100%;
 	
 }
