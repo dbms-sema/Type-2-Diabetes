@@ -8,7 +8,7 @@ filename = 'diabetes-prediction-rfc-model.pkl'
 classifier = pickle.load(open(filename, 'rb'))
 
 app = Flask(__name__)
-
+db = SQLAlchemy()
 ENV = 'dev'
 
 # if ENV != 'dev':
