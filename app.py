@@ -17,8 +17,8 @@ ENV = 'dev'
 # else:
 app.debug = True
 app.config['DATABASE_URI'] = 'postgres://mvkwzjbntalnko:365226844a4af9cc89bff9a45e6bf57ae3f91d5ceb9dca919bb608628cf706e2@ec2-52-203-74-38.compute-1.amazonaws.com:5432/d5b2hjlk5kkf9'
-if ('SQLALCHEMY_DATABASE_URI' not in app.config and 'SQLALCHEMY_BINDS' not in app.config):
-            warnings.warn('Neither SQLALCHEMY_DATABASE_URI nor SQLALCHEMY_BINDS is set. ' 'Defaulting SQLALCHEMY_DATABASE_URI to "sqlite:///:memory:".')
+
+
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 db = SQLAlchemy(app)
 
