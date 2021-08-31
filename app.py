@@ -1,7 +1,6 @@
 from flask import Flask, render_template, request
 import pickle
 from flask_sqlalchemy import SQLAlchemy
-from flask_postgres import PostgreSQL
 import numpy as np
 
 # Load the Random Forest CLassifier model
@@ -20,7 +19,7 @@ app.debug = True
 app.config['DATABASE_URI'] = 'postgres://mvkwzjbntalnko:365226844a4af9cc89bff9a45e6bf57ae3f91d5ceb9dca919bb608628cf706e2@ec2-52-203-74-38.compute-1.amazonaws.com:5432/d5b2hjlk5kkf9'
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
-db = PostgreSQL(app)
+db = SQLAlchemy(app)
 
 class Details(db.Model):
     __tablename__ = 'details'
