@@ -74,30 +74,9 @@ def result():
         dbp = request.form['dbp']
         obesity = request.form['obesity']
         physically_inactive = request.form['physically_inactive']
-         if age == '': 
-            return render_template('index.html', message='<b>Please All Fields Must Be Filled In !!</b>')
-         if sex =='': 
-            return render_template('index.html', message='<b>Please All Fields Must Be Filled In !!</b>')               
-         if residence == '':
-            return render_template('index.html', message='<b>Please All Fields Must Be Filled In !!</b>')
-         if bmi =='':
-            return render_template('index.html', message='<b>Please All Fields Must Be Filled In !!</b>')
-         if alcohol=='':
-            return render_template('index.html', message='<b>Please All Fields Must Be Filled In !!</b>')
-         if smoker=='':
-            return render_template('index.html', message='<b>Please All Fields Must Be Filled In !!</b>')
-         if sbp == '':
-            return render_template('index.html', message='<b>Please All Fields Must Be Filled In !!</b>')
-         if fhd =='':
-            return render_template('index.html', message='<b>Please All Fields Must Be Filled In !!</b>')
-         if hypertension=='':
-            return render_template('index.html', message='<b>Please All Fields Must Be Filled In !!</b>')
-         if dbp == '':
-            return render_template('index.html', message='<b>Please All Fields Must Be Filled In !!</b>')
-         if obesity =='':
-            return render_template('index.html', message='<b>Please All Fields Must Be Filled In !!</b>')
-         if physically_inactive =='':
-            return render_template('index.html', message='<b>Please All Fields Must Be Filled In !!</b>')
+         if age == '' or sex =='' or residence == '' or bmi =='' or alcohol=='' or smoker=='' or sbp == '' or fhd =='' or hypertension=='' or dbp == '' or obesity =='' or physically_inactive =='':
+                
+               return render_template('index.html', message='<b>Please All Fields Must Be Filled In !!</b>')
          else:
               data = Details(age,sex,residence,bmi,alcohol,smoker,sbp,fhd,hypertension,dbp,obesity,physically_inactive)
               db.create_all()
