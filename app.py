@@ -73,29 +73,29 @@ def result():
         dbp = request.form['dbp']
         obesity = request.form['obesity']
         physically_inactive = request.form['physically_inactive']
-        if age == ' ': 
+        if age == '': 
             return render_template('index.html', message='<b>Please All Fields Must Be Filled In !!</b>')
-        elif sex ==' ': 
+        if sex =='': 
             return render_template('index.html', message='<b>Please All Fields Must Be Filled In !!</b>')               
-        elif residence == ' ':
+        if residence == '':
             return render_template('index.html', message='<b>Please All Fields Must Be Filled In !!</b>')
-        elif bmi =='':
+        if bmi =='':
             return render_template('index.html', message='<b>Please All Fields Must Be Filled In !!</b>')
-        elif alcohol=='':
+        if alcohol=='':
             return render_template('index.html', message='<b>Please All Fields Must Be Filled In !!</b>')
-        elif smoker=='':
+        if smoker=='':
             return render_template('index.html', message='<b>Please All Fields Must Be Filled In !!</b>')
-        elif sbp == '':
+        if sbp == '':
             return render_template('index.html', message='<b>Please All Fields Must Be Filled In !!</b>')
-        elif fhd =='':
+        if fhd =='':
             return render_template('index.html', message='<b>Please All Fields Must Be Filled In !!</b>')
-        elif hypertension=='':
+        if hypertension=='':
             return render_template('index.html', message='<b>Please All Fields Must Be Filled In !!</b>')
-        elif dbp == '' :
+        if dbp == '':
             return render_template('index.html', message='<b>Please All Fields Must Be Filled In !!</b>')
-        elif obesity =='':
+        if obesity =='':
             return render_template('index.html', message='<b>Please All Fields Must Be Filled In !!</b>')
-        elif physically_inactive =='':
+        if physically_inactive =='':
             return render_template('index.html', message='<b>Please All Fields Must Be Filled In !!</b>')
         else:
             data = Details(age,sex,residence,bmi,alcohol,smoker,sbp,fhd,hypertension,dbp,obesity,physically_inactive)
