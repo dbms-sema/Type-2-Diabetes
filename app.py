@@ -74,17 +74,16 @@ def result():
         dbp = request.form['dbp']
         obesity = request.form['obesity']
         physically_inactive = request.form['physically_inactive']
-         if age == '' or sex =='' or residence == '' or bmi =='' or alcohol=='' or smoker=='' or sbp == '' or fhd =='' or hypertension=='' or dbp == '' or obesity =='' or physically_inactive =='':
-                
-               return render_template('index.html', message='<b>Please All Fields Must Be Filled In !!</b>')
-         else:
-              data = Details(age,sex,residence,bmi,alcohol,smoker,sbp,fhd,hypertension,dbp,obesity,physically_inactive)
-              db.create_all()
-              db.session.add(data)
-              db.session.commit()
-              data = np.array([[age,sex,residence,bmi,alcohol,smoker,sbp,fhd,hypertension,dbp,obesity,physically_inactive]])
-              my_prediction = classifier.predict(data)
-              return render_template('result.html', prediction=my_prediction)
+        if age == '' or sex =='' or residence == '' or bmi =='' or alcohol=='' or smoker=='' or sbp == '' or fhd =='' or hypertension=='' or dbp == '' or obesity =='' or physically_inactive =='':
+            return render_template('index.html', message='<b>Please All Fields Must Be Filled In !!</b>')
+        else:
+            data = Details(age,sex,residence,bmi,alcohol,smoker,sbp,fhd,hypertension,dbp,obesity,physically_inactive)
+            db.create_all()
+            db.session.add(data)
+            db.session.commit()
+            data = np.array([[age,sex,residence,bmi,alcohol,smoker,sbp,fhd,hypertension,dbp,obesity,physically_inactive]])
+            my_prediction = classifier.predict(data)
+            return render_template('result.html', prediction=my_prediction)
 
 if __name__ =='__main__':
      app.run()
