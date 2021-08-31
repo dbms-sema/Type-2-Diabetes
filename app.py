@@ -24,6 +24,7 @@ db = SQLAlchemy(app)
 
 class Details(db.Model):
     __tablename__ = 'details'
+    db.create_all()
     id = db.Column(db.Integer, primary_key=True)
     age = db.Column(db.Integer)
     sex = db.Column(db.String(20))
