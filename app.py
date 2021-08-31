@@ -23,7 +23,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 db = SQLAlchemy(app)
 
 class Details(db.Model):
-    __tablename__ = 'Details'
+    __tablename__ = 'details'
     id = db.Column(db.Integer, primary_key=True)
     age = db.Column(db.Integer)
     sex = db.Column(db.String(20))
