@@ -73,11 +73,11 @@ def result():
         dbp = request.form['dbp']
         obesity = request.form['obesity']
         physically_inactive = request.form['physically_inactive']
-        if age == '': 
+        if age == ' ': 
             return render_template('index.html', message='<b>Please All Fields Must Be Filled In !!</b>')
-        elif sex =='': 
+        elif sex ==' ': 
             return render_template('index.html', message='<b>Please All Fields Must Be Filled In !!</b>')               
-        elif residence == '':
+        elif residence == ' ':
             return render_template('index.html', message='<b>Please All Fields Must Be Filled In !!</b>')
         elif bmi =='':
             return render_template('index.html', message='<b>Please All Fields Must Be Filled In !!</b>')
