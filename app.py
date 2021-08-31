@@ -77,6 +77,7 @@ def result():
             return render_template('index.html', message='<b>Please All Fields Must Be Filled In !!</b>')
         else:
             data = Details(age,sex,residence,bmi,alcohol,smoker,sbp,fhd,hypertension,dbp,obesity,physically_inactive)
+            db.create_all()
             db.session.add(data)
             db.session.commit()
             data = np.array([[age,sex,residence,bmi,alcohol,smoker,sbp,fhd,hypertension,dbp,obesity,physically_inactive]])
