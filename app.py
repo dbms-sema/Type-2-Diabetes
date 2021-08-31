@@ -73,7 +73,29 @@ def result():
         dbp = request.form['dbp']
         obesity = request.form['obesity']
         physically_inactive = request.form['physically_inactive']
-        if age == '' or sex =='' or residence == '' or bmi =='' or alcohol=='' or smoker=='' or sbp == '' or  fhd =='' or hypertension=='' or dbp == '' or obesity =='' or physically_inactive =='':
+        if age == '': 
+            return render_template('index.html', message='<b>Please All Fields Must Be Filled In !!</b>')
+        elif sex =='': 
+            return render_template('index.html', message='<b>Please All Fields Must Be Filled In !!</b>')               
+        elif residence == '':
+            return render_template('index.html', message='<b>Please All Fields Must Be Filled In !!</b>')
+        elif bmi =='':
+            return render_template('index.html', message='<b>Please All Fields Must Be Filled In !!</b>')
+        elif alcohol=='':
+            return render_template('index.html', message='<b>Please All Fields Must Be Filled In !!</b>')
+        elif smoker=='':
+            return render_template('index.html', message='<b>Please All Fields Must Be Filled In !!</b>')
+        elif sbp == '':
+            return render_template('index.html', message='<b>Please All Fields Must Be Filled In !!</b>')
+        elif fhd =='':
+            return render_template('index.html', message='<b>Please All Fields Must Be Filled In !!</b>')
+        elif hypertension=='':
+            return render_template('index.html', message='<b>Please All Fields Must Be Filled In !!</b>')
+        elif dbp == '' :
+            return render_template('index.html', message='<b>Please All Fields Must Be Filled In !!</b>')
+        elif obesity =='':
+            return render_template('index.html', message='<b>Please All Fields Must Be Filled In !!</b>')
+        elif physically_inactive =='':
             return render_template('index.html', message='<b>Please All Fields Must Be Filled In !!</b>')
         else:
             data = Details(age,sex,residence,bmi,alcohol,smoker,sbp,fhd,hypertension,dbp,obesity,physically_inactive)
