@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request
 import pickle
 from flask_sqlalchemy import SQLAlchemy
-from flask postgres import PostgreSQL
+from flask_postgres import PostgreSQL
 import numpy as np
 
 # Load the Random Forest CLassifier model
